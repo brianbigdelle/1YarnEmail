@@ -30,7 +30,7 @@ const handleSubmit = (e) => {
     <form className="contact-form" 
           onSubmit={handleSubmit}>
        <input type="email" name="email" onChange={handleDetailsChange} placeholder="Enter your email here..." style={{ color: 'black' }}  />
-       <input type="submit" value="Send" style={{ color: 'black' }} />
+       <input className="button" type="submit" value="Send" style={{ color: 'black' }} />
      </form>
     )
   }
