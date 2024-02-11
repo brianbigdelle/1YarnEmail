@@ -6,6 +6,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <img src='../public/selknam.jpg'></img>
+    <h1>Join our Mailing List</h1>
     <App />
   </React.StrictMode>,
 )
