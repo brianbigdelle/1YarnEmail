@@ -5,12 +5,29 @@
   text-align: center;
 }
 
+form{
+  color: black;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
+.contact-form input[type="email"],
+.contact-form input[type="submit"] {
+  font-size: 1.2em; /* Adjust the font size as needed */
+}
+
+.contact-form input[type="email"]{
+  background-color: white;
+  border: solid grey;
+}
+
+
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

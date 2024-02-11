@@ -1,6 +1,6 @@
 
 import './App.css'
-import React, { useState } from 'react';
+import React, { setError, useState } from 'react';
 import emailSubscriptions from './emailPage';
 
 
@@ -14,6 +14,11 @@ const handleDetailsChange = (event) => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
+
+  if (!sub.trim()) {
+    setError("Please enter your email.");
+    return; // Stop further execution if email is empty
+  }
   console.log(sub)
   emailSubscriptions(e, sub);
 
@@ -24,9 +29,8 @@ const handleSubmit = (e) => {
   return (
     <form className="contact-form" 
           onSubmit={handleSubmit}>
-       <label> Email </label>
-       <input type="email" name="email" onChange={handleDetailsChange} placeholder="Enter your email here..." />
-       <input type="submit" value="Send" />
+       <input type="email" name="email" onChange={handleDetailsChange} placeholder="Enter your email here..." style={{ color: 'black' }}  />
+       <input type="submit" value="Send" style={{ color: 'black' }} />
      </form>
     )
   }
