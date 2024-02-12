@@ -22,7 +22,13 @@ const handleSubmit = (e) => {
   console.log(sub)
   emailSubscriptions(e, sub);
 
+  const message = document.querySelector("#success");
+
+  message.textContent="Added!";
+
 };
+
+
 
   
 
@@ -31,6 +37,7 @@ const handleSubmit = (e) => {
           onSubmit={handleSubmit}>
        <input type="email" name="email" onChange={handleDetailsChange} placeholder="Enter your email here..." style={{ color: 'black' }}  />
        <input className="button" type="submit" value="Send" style={{ color: 'black' }} />
+        <h4 id='success'></h4>
      </form>
     )
   }
